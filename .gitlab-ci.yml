@@ -1,0 +1,17 @@
+image: node:10
+build:
+  # only:
+  #   - develop
+  artifacts:
+    paths:
+      - public
+  stage: build
+  script:
+    - npm i
+    - npm run build
+pages:
+  artifacts:
+    paths:
+      - public
+  script:
+    - echo "Hello" 
